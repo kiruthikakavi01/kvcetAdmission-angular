@@ -1,0 +1,95 @@
+
+
+
+
+<body>
+    <div class="bg-image"></div>
+<div class="main">
+    <p class="sign">Sign Up</p>
+<form class="form1" (ngSubmit)="register()">
+    <div>
+        
+        <input class="un " type="text" id="name" name="name"  [(ngModel)]="name"placeholder="Enter your name" autofocus required/>
+    </div>
+    <div>
+        
+        <input class="email" type="email" id="emailId" name="emailId"  [(ngModel)]="emailId"placeholder="Enter your emailId" required/>
+        
+    </div>
+    <div>
+        
+        <input class="contactNo" type="number" id="contactNo" name="contactNo"  [(ngModel)]="contactNo"  placeholder="Enter your ContactNo" required/>
+    </div>
+    <div>
+        
+        <select class="course" id="course" name="course" [(ngModel)]="course"  required>
+            <option value >select course</option>
+            <option value="UG">UG</option>
+            <option value="PG">PG</option>
+            <option value="Lateral">Lateral</option>
+        </select>
+    </div>
+        <button class="submit" type="submit">submit</button>
+</form>
+
+</div>
+</body>
+<!-- <div class="main">
+    <p class="sign">Sign Up</p>
+    <form class="form1" (ngSubmit)="register()" >
+      <input class="un " id="name"type="text" [(ngModel)]="name" placeholder="Candidate Name">
+      <input class="email" id="emailId"type="email" [(ngModel)]="emailId" placeholder="emailId">
+      <input class="contactNo" id="contactNo" type="number" [(ngModel)]="contactNo" placeholder="Contact Number">
+      <select class="course" id="course" name="course" [(ngModel)]="course">
+          <option>Choose your Course</option>
+        <option value="UG">UG</option>
+        <option value="PG">PG</option>
+        <option value="Lateral">Lateral</option>
+    </select>
+     
+      <button  class="submit" type="submit">Sign Up</button>
+     </form>
+     </div>  -->
+
+
+
+
+
+
+
+
+
+
+
+     <!-- <div class="main">
+        <p class="sign">Sign Up</p>
+     <form class="form1" [formGroup]="exform" (ngSubmit)="register()">
+        <div class="form-group">
+            
+            <input formControlName="name" class="un " type="text" id="name" name="name"  [(ngModel)]="name"placeholder="Enter your name" autofocus required/>
+            <small *ngIf="exform.get('name') && exform.get('name')" class="text-danger">Name is Required</small> 
+        </div>
+        <div class="form-group">
+            
+            <input formControlName="email" class="email" type="email" id="emailId" name="emailId"  [(ngModel)]="emailId"placeholder="Enter your emailId" required/>
+            <small *ngIf="exform.get('email') && exform.get('email')" class="text-danger">Email is Required</small>
+        </div>
+        <div class="form-group">
+            
+            <input formControlName="phone" class="contactNo" type="number" id="contactNo" name="contactNo"  [(ngModel)]="contactNo" placeholder="Enter your ContactNo" required/>
+            <small *ngIf="exform.get('phone')&& exform.get('phone')" class="text-danger">Phone no is Required(minimum length 10,numbers are only allowed)</small>
+        </div>
+        <div class="form-group">
+            
+            <select formControlName="course" class="course" id="course" name="course" [(ngModel)]="course"  required>
+                <option disabled>select course</option>
+                <option value="UG">UG</option>
+                <option value="PG">PG</option>
+                <option value="Lateral">Lateral</option>
+            </select>
+            <small *ngIf="exform.get('course') && exform.get('course')" class="text-danger">Course Required</small>
+        </div>
+            <button class="submit" type="submit">submit</button>
+    </form>
+    </div>
+     -->

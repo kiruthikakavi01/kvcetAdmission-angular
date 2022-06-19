@@ -1,0 +1,330 @@
+<!-- <h1>PG Registration</h1>
+<div class="container">
+<form (ngSubmit)="pgDetails()" [formGroup]="multistep">
+<div *ngIf="step == 1" formGroupName="userDetails">
+
+<div>
+<label for="name">Name of the Candidate:</label><br>
+<input type="text" id="name" name="name" formControlName="name" [(ngModel)]="name"placeholder="Enter your name" required/>
+</div>
+<div>
+<label for="programme">Name of the Programme:</label><br>
+<select id="programme" name="programme" formControlName="programme" [(ngModel)]="programme">
+    <option value="ME Big Data Analytics">ME Big Data Analytics</option>
+    <option value="ME Biometrics and Cyber Security">ME Biometrics and Cyber Security</option>
+    <option value="ME CSE with Specialization in Networks">ME CSE with Specialization in Networks</option>
+    <option value="ME Manufacturing">ME Manufacturing</option>
+    <option value="M.Tech Biotechnology">M.Tech Biotechnology</option>
+    <option value="MBA">MBA</option>
+    <option value="MCA">MCA</option>
+</select>
+</div>
+<div>
+<label for="contactNo">Contact Number(Whatsapp No):</label><br>
+<input type="number" id="contactNo" name="contactNo" minlength="10" maxlength="10" formControlName="contactNo" [(ngModel)]="contactNo" placeholder="Enter your Number" required>
+</div>
+<div>
+<label for="emailId">Email Id:</label><br>
+<input type="email" id="emailId" name="emailId" formControlName="emailId" [(ngModel)]="emailId" placeholder="Enter email Id" required>
+</div>
+</div>
+<div *ngIf="step == 2">
+<div>
+<label for="ugCollegeName">UG College:</label><br>
+<input type="text" id="ugCollegeName" name="UGCollege"  [(ngModel)]="ugCollegeName" placeholder="Enter UG College Name" required>
+</div>
+<div>
+<label for="ugDepartment">UG Department:</label><br>
+<input type="text" id="ugDepartment" name="UGDepartment"  [(ngModel)]="ugDepartment" placeholder="Enter UG Department" required>
+</div>
+<div>
+<label for="place">Place:</label><br>
+<input type="text" id="place" name="place"  [(ngModel)]="place" placeholder="College location" required>
+</div>
+<div>
+    <label for="percentage">Percentage:</label><br>
+    <input type="number" id="percentage" name="percentage" min="0" max="100"  [(ngModel)]="percentage" placeholder="%" required>
+</div>
+<div>
+    <label for="completionYear">Year of Completion:</label><br>
+    <input type="month" id="completionYear" name="completionYear"  [(ngModel)]="completionYear" placeholder="Enter the completion year" required>
+</div>
+</div>
+<div *ngIf="step == 3">
+<div>
+    <label for="community">Community:</label><br>
+    <select id="community" name="community"  [(ngModel)]="community" required>
+        <option value="OC">OC</option>
+        <option value="BC">BC</option>
+        <option value="MBC">MBC</option>
+        <option value="SC">SC</option>
+        <option value="ST">ST</option>
+        <option value="BCM">BCM</option>
+        <option value="BCC">BCC</option>
+
+    </select>
+</div>
+<div>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob"  [(ngModel)]="dateOfBirth" placeholder="Enter dob" required>
+</div>
+<div>
+    <label for="scholarship">Scholarship Applicable:</label><br>
+    <select id="scholarship" name="scholarship"  [(ngModel)]="scholarship" required>
+        <option value="FU">FG</option>
+        <option value="PMSS">PMSS</option>
+        <option value="No">No</option>
+     </select>
+</div>
+<div>
+    <label for="fatherName">Father Name:</label><br>
+    <input type="text" id="fatherName" name="fatherName"  [(ngModel)]="fathername" placeholder="Enter Father Name" required>
+</div>
+<div>
+    <label for="fatherOccupation">Father Occupation:</label><br>
+    <input type="text" id="fatherOccupation" name="fatherOccupation"  [(ngModel)]="fatherOccupation" placeholder="enter Father Occupation" required>
+</div>
+<div>
+    <label for="motherName">Mother Name:</label><br>
+    <input type="text" id="motherName" name="motherName"  [(ngModel)]="motherName" placeholder="Enter Mother Name" required>
+</div>
+<div>
+    <label for="motherOccupation">Mother Occupation:</label><br>
+    <input type="text" id="motherOccupation" name="motherOccupation"  [(ngModel)]="motherOccupation" placeholder="Enter Mother Occupation" required>
+</div>
+<div>
+<label for="parentContactNo">Parent Contact Number:</label><br>
+<input type="number" id="parentContactNo" name="parentContactNo" minlength="10" maxlength="10"  [(ngModel)]="parentContactNo" placeholder="Enter parent Number" required>
+</div>
+<div>
+    <label for="alternativeContactNo">Alternative Contact Number:</label><br>
+<input type="number" id="alternativeContactNo" name="alternativeContactNo" minlength="10" maxlength="10"  [(ngModel)]="alternativeContactNo" placeholder="Enter your Number">
+</div>
+<div>
+<label for="address">Address:</label><br>
+<input type="text" id="address" name="address"  [(ngModel)]="address" placeholder="your address" required>
+
+
+</div>
+</div>
+<div *ngIf="step == 4">
+<div>
+    <label for="kvcetKnow">How to know KVCET:</label><br>
+    <select id="kvcetKnow" name="kvcetKnow"  [(ngModel)]="knowKvcet" required>
+        <option value="null">Select option</option>
+        <option value="Kvcet Website">Website</option>
+        <option value="Friends">Friends</option>
+        <option value="Relative">Relative</option>
+        <option value="Social Media">Social Media</option>
+        <option value="Kvcet Student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="Alumni">Alumni</option>
+        <option value="others">Others</option>
+
+    </select>
+</div>
+<div>
+    <label for="reference">Name of the reference:</label><br>
+    <input type="text" id="reference" name="reference"  [(ngModel)]="referenceName" placeholder="Name of reference" >
+</div>
+<div>
+    <label for="ifCandidate">If Candidate:</label><br>
+    <input type="text" id="ifCandidate" name="ifCandidate"  [(ngModel)]="ifCandidate" placeholder="Already joined or  not" required>
+</div>
+<div>
+    <label for="amountPaid">Amount Paid:</label><br>
+    <input type="number" id="amountPaid" name="amountPaid"  [(ngModel)]="amountPaid" placeholder="Enter paid amount">
+</div>
+<div>
+    <label for="originalCertificateList">Orginal Certificate List:</label><br>
+    <input type="text" id="originalCertificateList" name="originalCertificateList"  [(ngModel)]="originalCertificateList" placeholder="Enter handed or not" required>
+</div>
+</div>
+<a class="btn btn-primary mx-2" *ngIf="step!=1" (click)="previous()">Previous</a>
+<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step!=4">Next</button>
+<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step == 4">submit</button>
+</form></div>
+<br>
+{{multistep.value|json}}
+<div class="space">
+
+</div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <h1>PG Registration</h1>
+<div class="container">
+<form (ngSubmit)="pgDetails()" [formGroup]="multistep">
+<div *ngIf="step == 1" formGroupName="userDetails">
+
+<div>
+<label for="name">Name of the Candidate:</label><br>
+<input type="text" id="name" name="name" formControlName="name" [(ngModel)]="name" placeholder="Enter your name" required/>
+</div>
+<div>
+<label for="programme">Name of the Programme:</label><br>
+<select id="programme" name="programme" [(ngModel)]="programme" formControlName="programme" >
+    <option value="ME Big Data Analytics">ME Big Data Analytics</option>
+    <option value="ME Biometrics and Cyber Security">ME Biometrics and Cyber Security</option>
+    <option value="ME CSE with Specialization in Networks">ME CSE with Specialization in Networks</option>
+    <option value="ME Manufacturing">ME Manufacturing</option>
+    <option value="M.Tech Biotechnology">M.Tech Biotechnology</option>
+    <option value="MBA">MBA</option>
+    <option value="MCA">MCA</option>
+</select>
+</div>
+<div>
+<label for="contactNo">Contact Number(Whatsapp No):</label><br>
+<input type="number" id="contactNo" name="contactNo" minlength="10" maxlength="10" formControlName="contactNo" [(ngModel)]="contactNo" placeholder="Enter your Number" required>
+</div>
+<div>
+<label for="emailId">Email Id:</label><br>
+<input type="email" id="emailId" name="emailId" formControlName="emailId" [(ngModel)]="emailId" placeholder="Enter email Id" required>
+</div>
+</div>
+<div *ngIf="step == 2" formGroupName="ugDetails">
+<div>
+<label for="ugCollegeName">UG College:</label><br>
+<input type="text" id="ugCollegeName" name="UGCollege" formControlName="ugCollegeName" [(ngModel)]="ugCollegeName" placeholder="Enter UG College Name" required>
+</div>
+<div>
+<label for="ugDepartment">UG Department:</label><br>
+<input type="text" id="ugDepartment" name="UGDepartment"  formControlName="ugDepartment"  [(ngModel)]="ugDepartment" placeholder="Enter UG Department" required>
+</div>
+<div>
+<label for="place">Place:</label><br>
+<input type="text" id="place" name="place" formControlName="place" [(ngModel)]="place" placeholder="College location" required>
+</div>
+<div>
+    <label for="percentage">Percentage:</label><br>
+    <input type="number" id="percentage" name="percentage" min="0" max="100" [(ngModel)]="percentage" formControlName="percentage"  placeholder="%" required>
+</div>
+<div>
+    <label for="completionYear">Year of Completion:</label><br>
+    <input type="month" id="completionYear" name="completionYear" formControlName="completionYear" [(ngModel)]="completionYear" placeholder="Enter the completion year" required>
+</div>
+</div>
+<div *ngIf="step == 3" formGroupName="personalDetails">
+<div>
+    <label for="community">Community:</label><br>
+    <select id="community" name="community" formControlName="community" [(ngModel)]="community" required>
+        <option value="OC">OC</option>
+        <option value="BC">BC</option>
+        <option value="MBC">MBC</option>
+        <option value="SC">SC</option>
+        <option value="ST">ST</option>
+        <option value="BCM">BCM</option>
+        <option value="BCC">BCC</option>
+
+    </select>
+</div>
+<div>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" formControlName="dateOfBirth" [(ngModel)]="dateOfBirth" placeholder="Enter dob" required>
+</div>
+<div>
+    <label for="scholarship">Scholarship Applicable:</label><br>
+    <select id="scholarship" name="scholarship" formControlName="scholarship" [(ngModel)]="scholarship"  required>
+        <option value="FU">FG</option>
+        <option value="PMSS">PMSS</option>
+        <option value="No">No</option>
+     </select>
+</div>
+<div>
+    <label for="fatherName">Father Name:</label><br>
+    <input type="text" id="fatherName" name="fatherName"  formControlName="fathername" [(ngModel)]="fathername" placeholder="Enter Father Name" required>
+</div>
+<div>
+    <label for="fatherOccupation">Father Occupation:</label><br>
+    <input type="text" id="fatherOccupation" name="fatherOccupation" formControlName="fatherOccupation" [(ngModel)]="fatherOccupation"  placeholder="enter Father Occupation" required>
+</div>
+<div>
+    <label for="motherName">Mother Name:</label><br>
+    <input type="text" id="motherName" name="motherName"  formControlName="motherName" [(ngModel)]="motherName" placeholder="Enter Mother Name" required>
+</div>
+<div>
+    <label for="motherOccupation">Mother Occupation:</label><br>
+    <input type="text" id="motherOccupation" name="motherOccupation" formControlName="motherOccupation" [(ngModel)]="motherOccupation" placeholder="Enter Mother Occupation" required>
+</div>
+<div>
+<label for="parentContactNo">Parent Contact Number:</label><br>
+<input type="number" id="parentContactNo" name="parentContactNo" minlength="10" maxlength="10" formControlName="parentContactNo" [(ngModel)]="parentContactNo" placeholder="Enter parent Number" required>
+</div>
+<div>
+    <label for="alternativeContactNo">Alternative Contact Number:</label><br>
+<input type="number" id="alternativeContactNo" name="alternativeContactNo" minlength="10" maxlength="10" formControlName="alternativeContactNo"  [(ngModel)]="alternativeContactNo" placeholder="Enter your Number">
+</div>
+<div>
+<label for="address">Address:</label><br>
+<input type="text" id="address" name="address" formControlName="address" [(ngModel)]="address"  placeholder="your address" required>
+
+
+</div>
+</div>
+
+<div *ngIf="step == 4" formGroupName="otherDetails">
+<div>
+    <label for="kvcetKnow">How to know KVCET:</label><br>
+    <select id="kvcetKnow" name="kvcetKnow"  formControlName="knowKvcet" [(ngModel)]="knowKvcet" required>
+        <option value="null">Select option</option>
+        <option value="Kvcet Website">Website</option>
+        <option value="Friends">Friends</option>
+        <option value="Relative">Relative</option>
+        <option value="Social Media">Social Media</option>
+        <option value="Kvcet Student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="Alumni">Alumni</option>
+        <option value="others">Others</option>
+
+    </select>
+</div>
+<div>
+    <label for="reference">Name of the reference:</label><br>
+    <input type="text" id="reference" name="reference" formControlName="referenceName" [(ngModel)]="referenceName"  placeholder="Name of reference" >
+</div>
+<div>
+    <label for="ifCandidate">If Candidate:</label><br>
+    <input type="text" id="ifCandidate" name="ifCandidate" formControlName="ifCandidate" [(ngModel)]="ifCandidate" placeholder="Already joined or  not" required>
+</div>
+<div>
+    <label for="amountPaid">Amount Paid:</label><br>
+    <input type="number" id="amountPaid" name="amountPaid" formControlName="amountPaid" [(ngModel)]="amountPaid"  placeholder="Enter paid amount">
+</div>
+<div>
+    <label for="originalCertificateList">Orginal Certificate List:</label><br>
+    <input type="text" id="originalCertificateList" name="originalCertificateList" formControlName="originalCertificateList" [(ngModel)]="originalCertificateList"  placeholder="Enter handed or not" required>
+</div>
+</div>
+<!-- <a class="btn btn-primary mx-2" *ngIf="step!=1" (click)="previous()">Previous</a> -->
+<button id="submit"  class="btn btn-primary mx-2" *ngIf="step!=1&& step!=5" (click)="previous()">Previous</button>
+<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step!=4 && step!=5">Next</button>
+<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step == 4">submit</button>
+</form>
+</div>
+<br>
+<!-- <pre>{{multistep.value|json}}</pre> -->
+<div class="space">
+
+</div>
+
+

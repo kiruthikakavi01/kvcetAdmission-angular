@@ -1,0 +1,136 @@
+<h1>Lateral Entry Registration</h1>
+<div class="container">
+<form (ngSubmit)="lateralDetails()" [formGroup]="multistep">
+<div *ngIf="step == 1" formGroupName="userDetails">
+<div class="padder pt-2 pb-2">
+<label for="name">Name of the Candidate:</label><br>
+<input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" formControlName="name" placeholder="Enter your name" required/>
+</div>
+<div class="padder pt-2 pb-2">
+<label for="programme">Name of the Programme:</label><br>
+<select id="programme" class="form-control" name="programme" [(ngModel)]="programme" formControlName="programme" >
+    <option value="BE">BE</option>
+    <option value="BTech">BTech</option>
+</select>
+</div >
+<div  class="padder pt-2 pb-2">
+<label for="contactNo">Contact Number(Whatsapp No):</label><br>
+<input type="number" class="form-control" id="contactNo" name="contactNo" [(ngModel)]="contactNo" minlength="10" maxlength="10" formControlName="contactNo"  placeholder="Enter your Number" required>
+</div>
+<div class="padder pt-2 pb-2"  >
+<label for="emailId">Email Id:</label><br>
+<input type="email"  class="form-control" id="emailId" name="emailId" formControlName="emailId"  [(ngModel)]="emailId" placeholder="Enter email Id" required>
+</div>
+</div>
+<div *ngIf="step == 2" formGroupName="ugDetails">
+    <div class="form-group" class="padder pt-2 pb-2">
+        <label for="polytechnicName">Polytechnic Name:</label>
+        <input type="text"  class="form-control" class="form-control" name="polytechnicName" [(ngModel)]="polytechnicName" formControlName="polytechnicName" required placeholder="Enter polytechnic name" >
+    </div>
+<div class="padder pt-2 pb-2">
+<label for="place">Place:</label><br>
+<input type="text" class="form-control" id="place" name="place" formControlName="place"[(ngModel)]="place" placeholder="Polytechnic College location" required>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="percentage">Percentage:</label><br>
+    <input type="number" class="form-control" id="percentage" name="percentage" [(ngModel)]="percentage" min="0" max="100" formControlName="percentage"  placeholder="%" required>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="diplomaDepartment">Diploma Department:</label><br>
+    <input type="text" class="form-control" id="diplomaDepartment" name="diplomaDepartment" [(ngModel)]="diplomaDepartment" formControlName="diplomaDepartment" placeholder="Enter Diploma Department" required>
+    </div>
+</div>
+<div *ngIf="step == 3" formGroupName="personalDetails">
+<div class="padder pt-2 pb-2">
+    <label for="community">Community:</label><br>
+    <select id="community" class="form-control" name="community" formControlName="community"  [(ngModel)]="community" required>
+        <option value="OC">OC</option>
+        <option value="BC">BC</option>
+        <option value="MBC">MBC</option>
+        <option value="SC">SC</option>
+        <option value="ST">ST</option>
+        <option value="BCM">BCM</option>
+        <option value="BCC">BCC</option>
+    </select>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="date">Date of Birth:</label><br>
+    <input type="date" class="form-control" id="date" name="date" formControlName="date" [(ngModel)]="date" placeholder="Enter Date of Birth" required>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="scholarship">Scholarship Applicable:</label><br>
+    <select id="scholarship" class="form-control" name="scholarship" formControlName="scholarship"  [(ngModel)]="scholarship" required>
+        <option value="FU">FG</option>
+        <option value="PMSS">PMSS</option>
+        <option value="No">No</option>
+     </select>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="fatherName">Father Name:</label><br>
+    <input type="text" class="form-control" id="fatherName" name="fatherName" [(ngModel)]="fatherName" formControlName="fatherName" placeholder="Enter Father Name" >
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="fatherOccupation">Father Occupation:</label><br>
+    <input type="text" class="form-control" id="fatherOccupation" name="fatherOccupation" [(ngModel)]="fatherOccupation" formControlName="fatherOccupation"  placeholder="enter Father Occupation" >
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="motherName">Mother Name:</label><br>
+    <input type="text" class="form-control" id="motherName" name="motherName" [(ngModel)]="motherName" formControlName="motherName" placeholder="Enter Mother Name" >
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="motherOccupation">Mother Occupation:</label><br>
+    <input type="text" class="form-control" id="motherOccupation" name="motherOccupation"  [(ngModel)]="motherOccupation" formControlName="motherOccupation" placeholder="Enter Mother Occupation" required>
+</div>
+<div class="padder pt-2 pb-2">
+<label for="parentContactNo">Parent Contact Number:</label><br>
+<input type="number" class="form-control" id="parentContactNo" name="parentContactNo" [(ngModel)]="parentContactNo" minlength="10" maxlength="10" formControlName="parentContactNo" placeholder="Enter parent Number" required>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="alternativeContactNo">Alternative Contact Number:</label><br>
+<input type="number"  class="form-control" id="alternativeContactNo" name="alternativeContactNo" [(ngModel)]="alternativeContactNo" minlength="10" maxlength="10" formControlName="alternativeContactNo"  placeholder="Enter your Number">
+</div>
+<div class="padder pt-2 pb-2">
+<label for="address">Address:</label><br>
+<input type="text"  class="form-control" id="address" name="address" formControlName="address"  [(ngModel)]="address" placeholder="your address" required>
+</div>
+</div>
+<div *ngIf="step == 4" formGroupName="otherDetails">
+<div class="padder pt-2 pb-2">
+    <label for="knowKvcet">How to know KVCET:</label><br>
+    <select id="knowKvcet" class="form-control" name="knowKvcet" [(ngModel)]="knowKvcet" formControlName="knowKvcet">
+        <option value="null">Select option</option>
+        <option value="Kvcet Website">Website</option>
+        <option value="Friends">Friends</option>
+        <option value="Relative">Relative</option>
+        <option value="Social Media">Social Media</option>
+        <option value="Kvcet Student">Student</option>
+        <option value="faculty">Faculty</option>
+        <option value="Alumni">Alumni</option>
+        <option value="others">Others</option>
+    </select>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="referenceName">Name of the reference:</label><br>
+    <input type="text" class="form-control" id="referenceName" name="referenceName" [(ngModel)]="referenceName" formControlName="referenceName"  placeholder="Name of reference" >
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="ifCandidate">If Candidate:</label><br>
+    <input type="text" class="form-control" id="ifCandidate" name="ifCandidate"  [(ngModel)]="ifCandidate" formControlName="ifCandidate" placeholder="Already joined or  not" required>
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="amountPaid">Amount Paid:</label><br>
+    <input type="number"  class="form-control" id="amountPaid" name="amountPaid" [(ngModel)]="amountPaid" formControlName="amountPaid"  placeholder="Enter paid amount">
+</div>
+<div class="padder pt-2 pb-2">
+    <label for="originalCertificateList">Orginal Certificate List:</label><br>
+    <input type="text" class="form-control" id="originalCertificateList" [(ngModel)]="originalCertificateList" name="originalCertificateList" formControlName="originalCertificateList"  placeholder="Enter handed or not" required>
+</div>
+</div>
+<a class="btn btn-primary mx-2" *ngIf="step!=1" (click)="previous()">Previous</a>
+<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step!=4">Next</button>
+<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step == 4">submit</button>
+</form></div>
+<br>
+<!-- <pre>{{multistep.value|json}}</pre> -->
+<div class="space">
+</div>

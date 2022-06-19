@@ -1,0 +1,83 @@
+<div class="tspace"></div>
+<h4>PG Admission List</h4>
+
+<div class="outer-wrapper">
+    <div class="table-wrapper">
+<table>
+
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Date Of Enquiry</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Contact Number</th>
+            <th>Email Id</th>
+            <th>UG College</th>
+            <th>UG Department</th>
+            <th>Place</th>
+            <th>Percentage</th>
+            <th>Year Of Completion</th>
+            <th>Community</th>
+            <th>Date Of Birth</th>
+            <th>Scholarship Applicable</th>
+            <th>Father Name</th>
+            <th>Father Occupation</th>
+            <th>Mother Name</th>
+            <th>Mother Occupation</th>
+            <th>Parent Contact Number</th>
+            <th>Alternative Number</th>
+            <th>Address</th>
+            <th>How to Know KVCET</th>
+            <th>Name of the Reference</th>
+            <th>If Candidate</th>
+            <th>Amount Paid</th>
+            <th>Original Certificate List</th>
+
+           
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let pg of pgList;">
+            
+            <td>{{pg.enquiryNo}}</td>
+            <td>{{pg.dateOfEnquiry}}</td>
+            <td>{{pg.name}}</td>
+            <td>{{pg.department}}</td>
+            <td>{{pg.contactNumber}}</td>
+            <td>{{pg.emailId}}</td>
+            <td>{{pg.ugCollege}}</td>
+            <td>{{pg.ugDepartment}}</td>
+            <td>{{pg.place}}</td>
+            <td>{{pg.percentage}}</td>
+            <td>{{pg.yearOfCompletion}}</td>
+            <td>{{pg.community}}</td>
+            <td>{{pg.dateOfBirth}}</td>
+            <td>{{pg.scholarshipApplicable}}</td>
+            <td>{{pg.fatherName}}</td>
+            <td>{{pg.fatherOccupation}}</td>
+            <td>{{pg.motherName}}</td>
+            <td>{{pg.motherOccupation}}</td>
+            <td>{{pg.parentContactNumber}}</td>
+            <td>{{pg.alternativeNumber}}</td>
+            <td>{{pg.address}}</td>
+            <td>{{pg.howToKnowkvcet}}</td>
+            <td>{{pg.nameOfTheReference}}</td>
+            <td>{{pg.ifCandidate}}</td>
+            <td>{{pg.amountPaid}}</td>
+            <td>{{pg.originalCertificateList}}</td>
+
+
+            
+
+            
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="bspace">
+
+</div>

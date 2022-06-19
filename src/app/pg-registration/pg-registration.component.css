@@ -1,0 +1,200 @@
+body{
+  font-family: "Times New Roman", Times, serif;
+    
+    
+}
+*{box-sizing: border-box;}
+.container{
+    flex:0 1 700;
+    border-radius: 20px;
+    /* background-color:red; */
+    padding: 30px;
+    margin: auto;
+}
+h1{
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: underline;
+
+  
+  padding-left:5%;
+  font-size: 30px;
+  font-weight:100%;
+}
+.space{
+  padding-bottom: 50px;
+}
+label{
+  font-size: 19px;
+  font-weight:100%;
+}
+input[type=submit]{
+    background-color: #45a049;
+}
+input[type=text], select, textarea {
+    width: 50%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  input[type=number]{
+    width: 50%; 
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  input[type=email]{
+    width: 50%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical
+  }
+  input[type=Date]{
+    width: 50%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  input[type=month]{
+    width: 50%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+  #submit{
+      width: 10%;
+      padding: 12px; 
+     border: 1px solid rgb(10, 9, 9);
+  }
+
+  @media(max-width: 767px){
+    body{
+      font-family: "Times New Roman", Times, serif;
+        
+        
+    }
+    *{box-sizing: border-box;}
+    .container{
+        flex:0 1 700;
+        border-radius: 20px;
+        /* background-color:red; */
+        padding: 30px;
+        margin: auto;
+    }
+    h1{
+      font-family: "Times New Roman", Times, serif;
+      text-decoration: underline;
+    
+      
+      padding-left:5%;
+      font-size: 30px;
+      font-weight:100%;
+    }
+    .space{
+      padding-bottom: 50px;
+    }
+    label{
+      font-size: 19px;
+      font-weight:100%;
+    }
+    input[type=submit]{
+        background-color: #45a049;
+    }
+    input[type=text], select, textarea {
+        width: 50%; 
+        padding: 12px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px;
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        resize: vertical 
+      }
+      input[type=number]{
+        width: 50%; 
+        padding: 12px;
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        resize: vertical 
+      }
+      input[type=email]{
+        width: 50%; 
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px;
+        resize: vertical
+      }
+      input[type=Date]{
+        width: 50%; 
+        padding: 12px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        resize: vertical 
+      }
+      input[type=month]{
+        width: 50%; 
+        padding: 12px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+        margin-top: 6px; 
+        margin-bottom: 16px; 
+        resize: vertical 
+      }
+      input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        -webkit-appearance:none;
+        margin:0;
+    }
+    
+    input[type=number]{
+        -moz-appearance: textfield;
+    }
+      #submit{
+          width: 10%;
+          padding: 12px; 
+         border: 1px solid rgb(10, 9, 9);
+      }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}

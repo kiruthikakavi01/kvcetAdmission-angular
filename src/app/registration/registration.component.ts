@@ -42,7 +42,7 @@ register(){
     "userName": "kvcetcse01",
     "password": "asdfew233ww"
   };
-  const url="http://localhost:9009/reg/save";
+  const url="https://kvcetadmission-api.herokuapp.com/reg/save";
     this.http.post(url,userObj).subscribe((res)=>{
       console.log(res);
       

@@ -117,14 +117,15 @@ export class UgRegistrationComponent implements OnInit {
     };
     console.log(userObj);
     if(this.step == 5){
-      const url="http://localhost:9009/ug/save";
+      const url="https://kvcetadmission-api.herokuapp.com/ug/save";
     this.http.post(url,userObj).subscribe((res)=>{
       console.log(res);
      
       this.router.navigate(['/thankyou'])
     },(err)=>{
       console.log(err);
-      this.router.navigate(['/thankyou'])
+      // alert("unseccussfull");
+      this.router.navigate(['/sorry'])
      
     })
     }

@@ -126,8 +126,8 @@
     <input type="text" class="form-control" id="originalCertificateList" [(ngModel)]="originalCertificateList" name="originalCertificateList" formControlName="originalCertificateList"  placeholder="Enter handed or not" required>
 </div>
 </div>
-<a class="btn btn-primary mx-2" *ngIf="step!=1" (click)="previous()">Previous</a>
-<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step!=4">Next</button>
+<a class="btn btn-primary mx-2" *ngIf="step!=1 && step!=5" (click)="previous()">Previous</a>
+<button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step!=4 && step!=5">Next</button>
 <button id="submit" class="btn btn-primary mx-2" type="submit" *ngIf="step == 4">submit</button>
 </form></div>
 <br>

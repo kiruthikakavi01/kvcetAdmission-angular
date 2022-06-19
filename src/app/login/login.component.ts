@@ -20,7 +20,7 @@ password!:string;
       "password":this.password
     };
     let message!:string;
-    const url="http://localhost:9009/reg/login";
+    const url="https://kvcetadmission-api.herokuapp.com/reg/login";
       this.http.post(url,userObj,{responseType:'json'}).subscribe((res:any)=>{
         console.log(res);
         if(res.message==null){

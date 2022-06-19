@@ -1,0 +1,81 @@
+<div class="tspace"></div>
+<h4>Lateral Admission List</h4>
+
+<div class="outer-wrapper">
+    <div class="table-wrapper">
+<table>
+
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Date Of Enquiry</th>
+            <th>Name</th>
+            <th>Programme</th>
+            <th>Contact Number</th>
+            <th>Email Id</th>
+            <th>PolytechnicName</th>
+            <th>Place</th>
+            <th>Percentage</th>
+            <th>diplomaDepartment</th>
+            <th>Community</th>
+            <th>Date Of Birth</th>
+            <th>Scholarship Applicable</th>
+            <th>Father Name</th>
+            <th>Father Occupation</th>
+            <th>Mother Name</th>
+            <th>Mother Occupation</th>
+            <th>Parent Contact Number</th>
+            <th>Alternative Number</th>
+            <th>Address</th>
+            <th>How to Know KVCET</th>
+            <th>Name of the Reference</th>
+            <th>If Candidate</th>
+            <th>Amount Paid</th>
+            <th>Original Certificate List</th>
+
+           
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let lateral of lateralList;">
+            
+            <td>{{lateral.enquiryNo}}</td>
+            <td>{{lateral.dateOfEnquiry}}</td>
+            <td>{{lateral.name}}</td>
+            <td>{{lateral.programme}}</td>
+            <td>{{lateral.contactNumber}}</td>
+            <td>{{lateral.emailId}}</td>
+            <td>{{lateral.polytechnicName}}</td>
+            <td>{{lateral.place}}</td>
+            <td>{{lateral.percentage}}</td>
+            <td>{{lateral.diplomaDepartment}}</td>
+            <td>{{lateral.community}}</td>
+            <td>{{lateral.dateOfBirth}}</td>
+            <td>{{lateral.scholarshipApplicable}}</td>
+            <td>{{lateral.fatherName}}</td>
+            <td>{{lateral.fatherOccupation}}</td>
+            <td>{{lateral.motherName}}</td>
+            <td>{{lateral.motherOccupation}}</td>
+            <td>{{lateral.parentContactNumber}}</td>
+            <td>{{lateral.alternativeNumber}}</td>
+            <td>{{lateral.address}}</td>
+            <td>{{lateral.howToKnowkvcet}}</td>
+            <td>{{lateral.nameOfTheReference}}</td>
+            <td>{{lateral.ifCandidate}}</td>
+            <td>{{lateral.amountPaid}}</td>
+            <td>{{lateral.originalCertificateList}}</td>
+
+
+            
+
+            
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="bspace">
+
+</div>

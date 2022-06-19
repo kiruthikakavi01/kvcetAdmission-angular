@@ -17,7 +17,8 @@ body{
 }
 .menu-bar{
     background: linear-gradient(to right, #181817, #626164);
-    text-align:left;
+    /* text-align:left; */
+   
     
 }
 .menu-bar ul{

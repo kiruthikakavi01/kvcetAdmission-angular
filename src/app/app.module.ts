@@ -15,6 +15,10 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
 import { MailsendComponent } from './mailsend/mailsend.component';
 import { UgRegistrationComponent } from './ug-registration/ug-registration.component';
 import { LateralEntryRegistrationComponent } from './lateral-entry-registration/lateral-entry-registration.component';
+import { SorryComponent } from './sorry/sorry.component';
+import { ListUgAdmissionComponent } from './list-ug-admission/list-ug-admission.component';
+import { ListLateralAdmissionComponent } from './list-lateral-admission/list-lateral-admission.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { LateralEntryRegistrationComponent } from './lateral-entry-registration/
     ThankyouComponent,
     MailsendComponent,
     UgRegistrationComponent,
-    LateralEntryRegistrationComponent
+    LateralEntryRegistrationComponent,
+    SorryComponent,
+    ListUgAdmissionComponent,
+    ListLateralAdmissionComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

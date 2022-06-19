@@ -100,15 +100,16 @@ export class LateralEntryRegistrationComponent implements OnInit {
       "originalCertificateList": this.originalCertificateList
     };
     console.log(userObj);
-    if(this.step > 4){
-      const url="http://localhost:9009/lateralEntry/save";
+    if(this.step ==5){
+      const url="https://kvcetadmission-api.herokuapp.com/lateralEntry/save";
     this.http.post(url,userObj).subscribe((res)=>{
       console.log(res);
       // alert("successfully Registered");
       this.router.navigate(['/thankyou'])
     },(err)=>{
       console.log(err);
-      alert("Unsuccessfully Registered");
+      this.router.navigate(['/sorry'])
+      // alert("Unsuccessfully Registered");
     })
     }
   }

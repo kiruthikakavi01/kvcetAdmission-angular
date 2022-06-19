@@ -1,0 +1,89 @@
+<div class="tspace"></div>
+<h4>UG Admission List</h4>
+
+<div class="outer-wrapper">
+    <div class="table-wrapper">
+<table>
+
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Date Of Enquiry</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Contact Number</th>
+            <th>Email Id</th>
+            <th>School</th>
+            <th>Medium of Instruction</th>
+            <th>Place</th>
+            <th>Maths Mark</th>
+            <th>Physics Mark</th>
+            <th>Chemistry Mark</th>
+            <th>CutOff</th>
+            <th>Hsc Group</th>
+            <th>Community</th>
+            <th>Date Of Birth</th>
+            <th>Scholarship Applicable</th>
+            <th>Father Name</th>
+            <th>Father Occupation</th>
+            <th>Mother Name</th>
+            <th>Mother Occupation</th>
+            <th>Parent Contact Number</th>
+            <th>Alternative Number</th>
+            <th>Address</th>
+            <th>How to Know KVCET</th>
+            <th>Name of the Reference</th>
+            <th>If Candidate</th>
+            <th>Amount Paid</th>
+            <th>Original Certificate List</th>
+
+           
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let ug of ugList;">
+            
+            <td>{{ug.enquiryNo}}</td>
+            <td>{{ug.dateOfEnquiry}}</td>
+            <td>{{ug.name}}</td>
+            <td>{{ug.department}}</td>
+            <td>{{ug.contactNumber}}</td>
+            <td>{{ug.emailId}}</td>
+            <td>{{ug.school}}</td>
+            <td>{{ug.mediumOfInstruction}}</td>
+            <td>{{ug.place}}</td>
+            <td>{{ug.mathsMark}}</td>
+            <td>{{ug.physicsMark}}</td>
+            <td>{{ug.chemistryMark}}</td>
+            <td>{{ug.cutOff}}</td>
+            <td>{{ug.groupHsc}}</td>
+            <td>{{ug.community}}</td>
+            <td>{{ug.dateOfBirth}}</td>
+            <td>{{ug.scholarshipApplicable}}</td>
+            <td>{{ug.fatherName}}</td>
+            <td>{{ug.fatherOccupation}}</td>
+            <td>{{ug.motherName}}</td>
+            <td>{{ug.motherOccupation}}</td>
+            <td>{{ug.parentContactNumber}}</td>
+            <td>{{ug.alternativeNumber}}</td>
+            <td>{{ug.address}}</td>
+            <td>{{ug.howToKnowkvcet}}</td>
+            <td>{{ug.nameOfTheReference}}</td>
+            <td>{{ug.ifCandidate}}</td>
+            <td>{{ug.amountPaid}}</td>
+            <td>{{ug.originalCertificateList}}</td>
+
+
+            
+
+            
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div class="bspace">
+
+</div>

@@ -15,7 +15,7 @@ export class ListPgAdmissionComponent implements OnInit {
   }
   pgList!:any;
 displayAllPgStu(){
-  const url="http://localhost:9009/pg/list";
+  const url="https://kvcetadmission-api.herokuapp.com/pg/list";
     this.http.get(url).subscribe((res)=>{
       this.pgList = res;
     },err=>{

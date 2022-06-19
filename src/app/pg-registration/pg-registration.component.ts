@@ -109,10 +109,10 @@ multistep = new FormGroup({
       "originalCertificateList": this.originalCertificateList
     };
     
-    if(this.step == 4){
+    if(this.step == 5){
 
       
-      const url="http://localhost:9009/pg/save";
+      const url="https://kvcetadmission-api.herokuapp.com/pg/save";
       console.log(userObj);
     this.http.post(url,userObj).subscribe((res:any)=>{
       console.log(res);
@@ -121,7 +121,8 @@ multistep = new FormGroup({
      
     },(err)=>{
       console.log(err);
-      alert("Unsuccessfully Registered");
+      this.router.navigate(['/sorry'])
+      //alert("Unsuccessfully Registered");
       
     })
     }

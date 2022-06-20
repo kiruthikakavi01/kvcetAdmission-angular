@@ -6,28 +6,40 @@
     <div class="bg-image"></div>
 <div class="main">
     <p class="sign">Sign Up</p>
-<form class="form1" (ngSubmit)="register()">
+<form class="form1" [formGroup]="form" (ngSubmit)="register()">
     <div>
         
-        <input class="un " type="text" id="name" name="name"  [(ngModel)]="name"placeholder="Enter your name" autofocus required/>
+        <input class="un " type="text" id="name" name="name"  [(ngModel)]="name"placeholder="Enter your name" formControlName="name" [ngClass]="{'is-invalid':form.get('name')?.touched && form.get('name')?.invalid}" autofocus required/>
+        <div class="invalid-feedback">
+            <div>Name is required</div>
+        </div>
     </div>
     <div>
         
-        <input class="email" type="email" id="emailId" name="emailId"  [(ngModel)]="emailId"placeholder="Enter your emailId" required/>
-        
+        <input class="email" type="email" id="emailId" name="emailId"  [(ngModel)]="emailId"placeholder="Enter your emailId" formControlName="email" [ngClass]="{'is-invalid':form.get('email')?.touched && form.get('email')?.invalid}" required/>
+        <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class="invalid-feedback">
+            
+            <div *ngIf="form.get('email')?.errors" >Email is required,Email must be a valid Address</div>
+        </div>
     </div>
     <div>
         
-        <input class="contactNo" type="number" id="contactNo" name="contactNo"  [(ngModel)]="contactNo"  placeholder="Enter your ContactNo" required/>
+        <input class="contactNo" type="number" id="contactNo" name="contactNo"   [(ngModel)]="contactNo" formControlName="contactNo" [ngClass]="{'is-invalid':form.get('contactNo')?.touched && form.get('contactNo')?.invalid}" minlength="10" maxlength="10" placeholder="Enter your ContactNo" required/>
+        <div *ngIf="form.get('contactNo')?.touched && form.get('contactNo')?.invalid" class="invalid-feedback">
+            <div *ngIf="form.get('contactNo')?.errors">Contact Number is required and must be 10 digit</div>
+        </div>
     </div>
     <div>
         
-        <select class="course" id="course" name="course" [(ngModel)]="course"  required>
+        <select class="course" id="course" name="course" [(ngModel)]="course" formControlName="course" [ngClass]="{'is-invalid':form.get('course')?.touched && form.get('course')?.invalid}" required>
             <option value >select course</option>
             <option value="UG">UG</option>
             <option value="PG">PG</option>
             <option value="Lateral">Lateral</option>
         </select>
+        <div *ngIf="form.get('course')?.touched && form.get('course')?.invalid" class="invalid-feedback">
+            <div *ngIf="form.get('course')?.errors">Course is required</div>
+        </div>
     </div>
         <button class="submit" type="submit">submit</button>
 </form>

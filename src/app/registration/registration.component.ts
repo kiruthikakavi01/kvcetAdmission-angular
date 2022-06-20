@@ -9,27 +9,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  exform!: FormGroup;
+  
 
   name!:string;
 emailId!:string;
 contactNo!:number;
 course!:string;
 
-
+form = new FormGroup({
+   name:new FormControl('', Validators.required),
+   email:new FormControl('',[Validators.required,Validators.email]),
+   contactNo:new FormControl('',[Validators.required,Validators.pattern("(\\+91-?)|0?[0-9]{10}")]),
+   course:new FormControl('',Validators.required)
+})
   constructor(private http:HttpClient,public router: Router) { }
 
   ngOnInit(): void {
-    this.exform=new FormGroup({
-      'name':new FormControl(null,Validators.required),
-      'email':new FormControl(null,[Validators.required,Validators.email]),
-      'phone':new FormControl(
-        null,[
-          Validators.required,
-        Validators.pattern('^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$')
-        ]),
-      'course':new FormControl(null,[Validators.required])
-    });
+    
 
 
   }

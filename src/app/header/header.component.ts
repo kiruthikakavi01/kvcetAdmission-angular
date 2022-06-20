@@ -9,7 +9,13 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  value!:any;
   ngOnInit(): void {
+    while(this.value==null){
+    this.value=localStorage.getItem("token")
+    this.value=JSON.parse(this.value)
+    console.log("value: ",this.value);
+    }
   }
 
 }

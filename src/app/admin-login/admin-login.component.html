@@ -1,1 +1,23 @@
-<p>admin-login works!</p>
+<div class="bg-image"></div>
+<div class="main">
+    <p class="sign">Admin Login
+
+    </p>
+<form  class="form1" [formGroup]="form" (ngSubmit)="adminLogin()">
+    <div>
+        
+        <input class="email" type="email" id="email" name="email"  [(ngModel)]="email" formControlName="email" [ngClass]="{'is-invalid':form.get('email')?.touched && form.get('email')?.invalid}" placeholder="email" autofocus required/>
+        <div class="invalid-feedback">
+            <div>email is required</div>
+        </div>
+    </div>
+    <div>
+        <input class="password" type="password" id="password" name="password" [(ngModel)]="password" formControlName="password" [ngClass]="{'is-invalid':form.get('password')?.touched && form.get('password')?.invalid}" placeholder="Password" required/>
+        <div class="invalid-feedback">
+            <div>Password is required</div>
+        </div>
+    </div>
+    
+    <button class="submit" type="submit">submit</button>
+</form>
+</div>

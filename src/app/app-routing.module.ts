@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AuthguardGuard } from './authguard.guard';
 import { HomeComponent } from './home/home.component';
 import { LateralEntryRegistrationComponent } from './lateral-entry-registration/lateral-entry-registration.component';
 import { ListLateralAdmissionComponent } from './list-lateral-admission/list-lateral-admission.component';
@@ -17,14 +19,15 @@ const routes: Routes = [
   {path:'pg-registration',component:PgRegistrationComponent},
   {path:'ug-registration',component:UgRegistrationComponent},
   {path:'lateral-entry-registration',component:LateralEntryRegistrationComponent},
-  {path:'list-ug-admission',component:ListUgAdmissionComponent},
-  {path:'list-lateral-admission',component:ListLateralAdmissionComponent},
+  {path:'list-ug-admission',component:ListUgAdmissionComponent,canActivate:[AuthguardGuard]},
+  {path:'list-lateral-admission',component:ListLateralAdmissionComponent,canActivate:[AuthguardGuard]},
   {path:'registration',component:RegistrationComponent},
-  {path:'list-pg-admission',component:ListPgAdmissionComponent},
+  {path:'list-pg-admission',component:ListPgAdmissionComponent,canActivate:[AuthguardGuard]},
   {path:'login',component:LoginComponent},
   {path:'mailsend',component:MailsendComponent},
   {path:'thankyou',component:ThankyouComponent},
   {path:'sorry',component:SorryComponent},
+  {path:'admin-login',component:AdminLoginComponent},
   {path:'',redirectTo:'registration',pathMatch:'full'}
 ];
 

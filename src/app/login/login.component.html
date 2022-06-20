@@ -2,13 +2,19 @@
 <div class="bg-image"></div>
 <div class="main">
     <p class="sign">Sign In</p>
-<form  class="form1" (ngSubmit)="login()">
+<form  class="form1" [formGroup]="form" (ngSubmit)="login()">
     <div>
         
-        <input class="username" type="text" id="username" name="userName"  [(ngModel)]="userName" placeholder="UserName" autofocus required/>
+        <input class="username" type="text" id="username" name="userName"  [(ngModel)]="userName" formControlName="userName" [ngClass]="{'is-invalid':form.get('userName')?.touched && form.get('userName')?.invalid}" placeholder="UserName" autofocus required/>
+        <div class="invalid-feedback">
+            <div>UserName is required</div>
+        </div>
     </div>
     <div>
-        <input class="password" type="password" id="password" name="password" [(ngModel)]="password" placeholder="Password" required/>
+        <input class="password" type="password" id="password" name="password" [(ngModel)]="password" formControlName="password" [ngClass]="{'is-invalid':form.get('password')?.touched && form.get('password')?.invalid}" placeholder="Password" required/>
+        <div class="invalid-feedback">
+            <div>Password is required</div>
+        </div>
     </div>
     
     <button class="submit" type="submit">submit</button>

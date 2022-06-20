@@ -16,12 +16,12 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
 import { UgRegistrationComponent } from './ug-registration/ug-registration.component';
 
 const routes: Routes = [
+  {path:'registration',component:RegistrationComponent},
   {path:'pg-registration',component:PgRegistrationComponent},
   {path:'ug-registration',component:UgRegistrationComponent},
   {path:'lateral-entry-registration',component:LateralEntryRegistrationComponent},
   {path:'list-ug-admission',component:ListUgAdmissionComponent,canActivate:[AuthguardGuard]},
   {path:'list-lateral-admission',component:ListLateralAdmissionComponent,canActivate:[AuthguardGuard]},
-  {path:'registration',component:RegistrationComponent},
   {path:'list-pg-admission',component:ListPgAdmissionComponent,canActivate:[AuthguardGuard]},
   {path:'login',component:LoginComponent},
   {path:'mailsend',component:MailsendComponent},
